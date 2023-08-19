@@ -29,3 +29,11 @@ jobs:                                # Job 설정
           source: './build'
           target: '/home/ubuntu'
           rm: true
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: pwd
