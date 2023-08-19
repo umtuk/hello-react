@@ -26,5 +26,5 @@ jobs:                                # Job 설정
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.KEY }}
-          source: './build/*'
-          target: '/home/ubuntu/public/'
+          source: './build'
+          target: '/home/ubuntu/public'
