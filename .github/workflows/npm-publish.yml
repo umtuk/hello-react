@@ -36,4 +36,5 @@ jobs:                                # Job 설정
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
+          key: ${{ secrets.KEY }}
           script: pwd
