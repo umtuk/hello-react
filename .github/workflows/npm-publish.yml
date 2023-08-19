@@ -29,7 +29,7 @@ jobs:                                # Job 설정
           source: './build'
           target: '/home/ubuntu'
       
-      - name: Copy build files to public over ssh
+      - name: Copy build files to public folder over ssh
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -37,4 +37,4 @@ jobs:                                # Job 설정
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           script: |
-            whoami
+            cp -rp build/* public
